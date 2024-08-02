@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python-style cURL/Fetch Converter</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Python-style cURL/Fetch Converter</h1>
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('curl')">cURL</div>
+      <div class="tab" onclick="switchTab('fetch')">Fetch</div>
+    </div>
+    <textarea id="input" placeholder="Enter your cURL or fetch command here..."></textarea>
+    <div class="button-container">
+      <button class="clear-button" onclick="clearInput()">Clear Input</button>
+      <button onclick="convertToPython()">Convert to Python</button>
+      <div class="switch-container">
+        <span class="slider-label">requests</span>
+        <label class="switch">
+          <input type="checkbox" id="libraryToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="slider-label">httpx</span>
+      </div>
+    </div>
+    <div id="output"></div>
+  </div>
+
+  <div class="copy-alert" id="copyAlert">Copied to clipboard!</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="/static/script.js"></script>
+</body>
+</html>
